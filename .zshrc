@@ -82,4 +82,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=/home/elias/.cfg/ --work-tree=/home/elias'
+alias config='/usr/bin/git --git-dir=/home/elias/.config/dotfiles --work-tree=/home/elias'

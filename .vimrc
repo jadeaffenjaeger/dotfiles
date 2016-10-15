@@ -39,7 +39,7 @@ set splitright
 "Extend undo history and write to file
 set history=1000
 set undofile
-set undodir=~/.vim/.vimundo/
+set undodir=~/.vim/undo/
 
 set lbr
 set tw=500
