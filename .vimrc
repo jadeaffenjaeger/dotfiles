@@ -1,7 +1,8 @@
-"Run pathogen
+"PLUGINS
+"pathogen
 execute pathogen#infect()
 
-"Set up airline
+"airline
 let g:powerline_loaded = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -9,15 +10,16 @@ let g:airline_theme='powerlineish'
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
 
-"Set up NerdTree
+"NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-"Set up vimtex
+"vimtex
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf'
 set grepprg=grep\ -nH\ $*
 
+"VIM
 "Set up terminal color and color scheme
 set t_Co=256
 colorscheme inori   
@@ -33,50 +35,50 @@ filetype indent on
 set splitbelow
 set splitright
 
-"Extend undo history size and make persistent
+"Extend undo history size and make persistent, disable swapping
 set history=2000
 set undofile
 set undodir=~/.vim/undo//
+set noswapfile
 
-"Tabs and space
+"TABS AND SPACE
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
 
-"UI Configuration
+"UI CONFIGURATION
 set cursorline		"Highlight current line"
 set number			"Enable line numbering"
 set relativenumber	"Number lines relative to current line"
 set lazyredraw		"Speed up macros"
 set showmatch		"Matching parentheses"
 set noerrorbells	"Disable terminal sound"
-"set visualbell
+set novisualbell	"No visual alerts"
+set scrolloff=9		"Leave 9 lines on top or bottom when scrolling"
 
 set showcmd			"Show current command"
 set wildmenu		"Show autocompletion options on commands"
 
+set backspace=indent,eol,start	"remove more when backspacing"
+set autoread		"Always reread changed files"
 set lbr
+set hidden			"Unload hidden buffers"
+
 set tw=500
 
-set hidden
-
-set nohlsearch
-
-set autoread
+"SEARCHING
+set incsearch		"Search as characters are entered"
+set smartcase		"only match casing when uppercase"
+nnoremap <leader><space> :nohlsearch<CR>
 
 set laststatus=2
 set mat=2
 
 set autoindent
 set smartindent
-set scrolloff=9
 
-set incsearch
-set nohlsearch
-set smartcase
 set ai
 set si
 
 set foldenable
-set noswapfile
