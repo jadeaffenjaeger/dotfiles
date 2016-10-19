@@ -26,9 +26,6 @@ colorscheme inori
 let mapleader=","
 
 syntax on               "Syntax highlighting by default
-set number              "Turn line numbering on by default
-set relativenumber      "Enable relative numbering
-
 filetype plugin on
 filetype indent on
 
@@ -36,42 +33,47 @@ filetype indent on
 set splitbelow
 set splitright
 
-"Extend undo history and write to file
-set history=1000
+"Extend undo history size and make persistent
+set history=2000
 set undofile
-set undodir=~/.vim/undo/
+set undodir=~/.vim/undo//
+
+"Tabs and space
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+
+"UI Configuration
+set cursorline		"Highlight current line"
+set number			"Enable line numbering"
+set relativenumber	"Number lines relative to current line"
+set lazyredraw		"Speed up macros"
+set showmatch		"Matching parentheses"
+set noerrorbells	"Disable terminal sound"
+"set visualbell
+
+set showcmd			"Show current command"
+set wildmenu		"Show autocompletion options on commands"
 
 set lbr
 set tw=500
 
-set lazyredraw
 set hidden
 
-set noerrorbells
-set visualbell
 set nohlsearch
 
 set autoread
 
 set laststatus=2
-set showcmd
-set wildmenu
-set showmatch
 set mat=2
 
 set autoindent
 set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
-set expandtab
 set scrolloff=9
 
 set incsearch
 set nohlsearch
-set ignorecase
 set smartcase
 set ai
 set si
