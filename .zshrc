@@ -55,7 +55,7 @@ plugins=(git vi-like zsh-syntax-highlighting)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
-export TERM='xterm-256color'
+#export TERM='xterm-256color'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,7 +64,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
-export DEFAULT_USER='elias'
+#export DEFAULT_USER='elias'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
