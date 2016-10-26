@@ -72,6 +72,7 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 export DEFAULT_USER='elias'
+export DISABLE_AUTO_TITLE=true
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
