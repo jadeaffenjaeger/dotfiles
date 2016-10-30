@@ -73,6 +73,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 export DEFAULT_USER='elias'
 export DISABLE_AUTO_TITLE=true
+export GPODDER_DOWNLOAD_DIR=/run/media/elias/int-hdd2/podcasts 
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
