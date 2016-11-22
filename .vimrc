@@ -46,6 +46,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
+
+"set listchars=tab:>-
 
 "UI CONFIGURATION
 set cursorline		"Highlight current line"
