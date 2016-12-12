@@ -16,13 +16,13 @@ map <C-n> :NERDTreeToggle<CR>
 "vimtex
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_MultipleCompileFormats='pdf'
+let g:Tex_MultipleCompileFormats='pdf, bib, dvi'
 set grepprg=grep\ -nH\ $*
 
 "VIM
 "Set up terminal color and color scheme
 set t_Co=256
-colorscheme inori   
+colorscheme inori
 
 "remap leader
 let mapleader=","
@@ -52,13 +52,18 @@ set expandtab
 
 "UI CONFIGURATION
 set cursorline		"Highlight current line"
-set number			"Enable line numbering"
 set relativenumber	"Number lines relative to current line"
 set lazyredraw		"Speed up macros"
 set showmatch		"Matching parentheses"
 set noerrorbells	"Disable terminal sound"
 set novisualbell	"No visual alerts"
 set scrolloff=9		"Leave 9 lines on top or bottom when scrolling"
+
+"Show Whitespaces
+set list
+set listchars=eol:¬,tab:▸·,trail:~,extends:>,precedes:<
+hi SpecialKey ctermfg=DARKGRAY ctermbg=235
+hi NonText ctermfg=DARKGRAY ctermbg=235
 
 set showcmd			"Show current command"
 set wildmenu		"Show autocompletion options on commands"
@@ -84,4 +89,6 @@ set smartindent
 set ai
 set si
 
+"FOLDING
 set foldenable
+
