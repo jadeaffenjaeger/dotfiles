@@ -56,36 +56,35 @@ set shiftwidth=4
 set smarttab
 set expandtab
 
-"set listchars=tab:>-
-
 "UI CONFIGURATION
-set cursorline		"Highlight current line"
-set relativenumber	"Number lines relative to current line"
-set lazyredraw		"Speed up macros"
-set showmatch		"Matching parentheses"
-set noerrorbells	"Disable terminal sound"
-set novisualbell	"No visual alerts"
-set scrolloff=9		"Leave 9 lines on top or bottom when scrolling"
+set cursorline      "Highlight current line"
+set number
+set relativenumber  "Number lines relative to current line"
+set lazyredraw      "Speed up macros"
+set showmatch       "Matching parentheses"
+set noerrorbells    "Disable terminal sound"
+set novisualbell    "No visual alerts"
+set scrolloff=9     "Leave 9 lines on top or bottom when scrolling"
 
 "Show Whitespaces
 set list
-set listchars=eol:¬,tab:▸·,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:▸-,space:·,trail:~,extends:>,precedes:<
 hi SpecialKey ctermfg=DARKGRAY ctermbg=235
 hi NonText ctermfg=DARKGRAY ctermbg=235
 
-set showcmd			"Show current command"
-set wildmenu		"Show autocompletion options on commands"
+set showcmd         "Show current command"
+set wildmenu        "Show autocompletion options on commands"
 
-set backspace=indent,eol,start	"remove more when backspacing"
-set autoread		"Always reread changed files"
+set backspace=indent,eol,start  "remove more when backspacing"
+set autoread        "Always reread changed files"
 set lbr
-set hidden			"Unload hidden buffers"
+set hidden          "Unload hidden buffers"
 
 set tw=500
 
 "SEARCHING
-set incsearch		"Search as characters are entered"
-set smartcase		"only match casing when uppercase"
+set incsearch       "Search as characters are entered"
+set smartcase       "only match casing when uppercase"
 nnoremap <leader><space> :nohlsearch<CR>
 
 set laststatus=2
@@ -93,6 +92,7 @@ set mat=2
 
 set autoindent
 set smartindent
+
 
 set ai
 set si
