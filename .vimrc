@@ -9,9 +9,17 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
 let g:airline_enable_branch = 1
 let g:airline_enable_syntastic = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "NerdTree
 map <C-n> :NERDTreeToggle<CR>
+
+"YCM
+let g:ycm_confirm_extra_conf = 0
+
+"Make snipmate cooperate with YCM
+:imap jj <esc>a<Plug>snipMateNextOrTrigger
+:smap jj <Plug>snipMateNextOrTrigger
 
 "vimtex
 let g:tex_flavor='latex'
