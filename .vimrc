@@ -35,6 +35,9 @@ colorscheme inori
 "remap leader
 let mapleader=","
 
+"Hit one key instead of two when entering commands :)
+nnoremap ; :
+
 syntax on               "Syntax highlighting by default
 filetype plugin on
 filetype indent on
@@ -66,9 +69,16 @@ set noerrorbells    "Disable terminal sound"
 set novisualbell    "No visual alerts"
 set scrolloff=9     "Leave 9 lines on top or bottom when scrolling"
 
+"make break line editing less weird
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
+noremap  <buffer> <silent> 0 g0
+noremap  <buffer> <silent> $ g$
+
 "Show Whitespaces
 set list
-set listchars=eol:¬,tab:▸-,space:·,trail:~,extends:>,precedes:<
+set listchars=tab:▸-,trail:·
+"set listchars=eol:¬,tab:▸-,space:·,trail:~,extends:>,precedes:<
 hi SpecialKey ctermfg=DARKGRAY ctermbg=235
 hi NonText ctermfg=DARKGRAY ctermbg=235
 
@@ -99,4 +109,3 @@ set si
 
 "FOLDING
 set foldenable
-
