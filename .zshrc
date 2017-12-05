@@ -76,6 +76,7 @@ export EDITOR='vim'
 export DEFAULT_USER='elias'
 export DISABLE_AUTO_TITLE=true
 export GPODDER_DOWNLOAD_DIR=/run/media/elias/int-hdd2/podcasts 
+export GTEST_DIR=~/googletest/googletest
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,6 +93,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=/home/elias/.config/dotfiles --work-tree=/home/elias'
+alias confclone='git clone --bare git@github.com:jadeaffenjaeger/dotfiles.git $HOME/.config/dotfiles'
+#alias edu='systemctl stop Networkmanager.service && wpa_supplicant -iwlp3s0 -c/etc/wpa_supplicant/eduroam.conf'
 
 #. /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 
