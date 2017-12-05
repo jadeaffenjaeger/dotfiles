@@ -1,6 +1,27 @@
 "PLUGINS
 "pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
+"
+
+"Vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ddollar/nerdcommenter'
+Plugin 'lervag/vimtex'
+Plugin 'easymotion/vim-easymotion'
+
+call vundle#end()
+
+filetype plugin indent on
 
 "airline
 let g:powerline_loaded = 1
@@ -14,23 +35,30 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
+colorscheme inori
+" EasyMotion
+" easymotion highlight colors
+" hi link EasyMotionTarget ORANGE
+" hi link EasyMotionTarget2First DARK_ORANGE
+" hi link EasyMotionTarget2Second DARK_ORANGE
+" hi link EasyMotionShade Comment
+
 "YCM
-let g:ycm_confirm_extra_conf = 0
+" let g:ycm_confirm_extra_conf = 0
 
 "Make snipmate cooperate with YCM
-:imap jj <esc>a<Plug>snipMateNextOrTrigger
-:smap jj <Plug>snipMateNextOrTrigger
+" :imap jj <esc>a<Plug>snipMateNextOrTrigger
+" :smap jj <Plug>snipMateNextOrTrigger
 
 "vimtex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_MultipleCompileFormats='pdf, bib, dvi'
-set grepprg=grep\ -nH\ $*
+" let g:tex_flavor='latex'
+" let g:Tex_DefaultTargetFormat='pdf'
+" let g:Tex_MultipleCompileFormats='pdf, bib, dvi'
+" set grepprg=grep\ -nH\ $*
 
 "VIM
 "Set up terminal color and color scheme
 set t_Co=256
-colorscheme inori
 
 "remap leader
 let mapleader=","
@@ -52,7 +80,7 @@ set undofile
 set undodir=~/.vim/undo//
 set noswapfile
 
-"TABS AND SPACE
+"TABS AND SPACES
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -78,7 +106,7 @@ noremap  <buffer> <silent> $ g$
 "Show Whitespaces
 set list
 set listchars=tab:▸-,trail:·
-"set listchars=eol:¬,tab:▸-,space:·,trail:~,extends:>,precedes:<
+" set listchars=eol:¬,tab:▸-,space:·,trail:~,extends:>,precedes:<
 hi SpecialKey ctermfg=DARKGRAY ctermbg=235
 hi NonText ctermfg=DARKGRAY ctermbg=235
 
