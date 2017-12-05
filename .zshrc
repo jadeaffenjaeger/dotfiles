@@ -1,5 +1,7 @@
+if [ "$TMUX" = ""  ]; then tmux; fi
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/elias/.oh-my-zsh
+export ZSH=/home/elias/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -80,7 +82,7 @@ export GTEST_DIR=~/googletest/googletest
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
