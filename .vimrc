@@ -35,7 +35,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
-colorscheme inori
 " EasyMotion
 " easymotion highlight colors
 " hi link EasyMotionTarget ORANGE
@@ -59,6 +58,7 @@ colorscheme inori
 "VIM
 "Set up terminal color and color scheme
 set t_Co=256
+colorscheme inori
 
 "remap leader
 let mapleader=","
