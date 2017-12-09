@@ -76,7 +76,7 @@ export EDITOR='vim'
 export DEFAULT_USER='elias'
 export DISABLE_AUTO_TITLE=true
 export GPODDER_DOWNLOAD_DIR=/run/media/elias/int-hdd2/podcasts 
-export GTEST_DIR=~/googletest/googletest
+export GTEST_DIR=/usr
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -98,3 +98,22 @@ alias confclone='git clone --bare git@github.com:jadeaffenjaeger/dotfiles.git $H
 
 #. /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 
+# FZF scripts:
+fo() {
+    local out file key
+    IFS=$'\n' out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
+    key=$(head -1 <<< "$out")
+    file=$(head -2 <<< "$out" | tail -1)
+    if [ -n "$file"  ]; then
+        [ "$key" = ctrl-o  ] && open "$file" || ${EDITOR:-vim} "$file"
+    fi
+
+}
+
+fd() {
+    local dir
+    dir=$(find ${1:-.} -path '*/\.*' -prune \
+        -o -type d -print 2> /dev/null | fzf +m) &&
+        cd "$dir"
+
+}

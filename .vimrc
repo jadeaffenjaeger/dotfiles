@@ -10,6 +10,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"PlugIns
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
@@ -18,6 +19,12 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ddollar/nerdcommenter'
 Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mileszs/ack.vim'
+" Plugin 'scrooloose/syntastic'
+
+"Color Schemes
+Plugin 'duythinht/inori'
+Plugin 'sjl/badwolf'
 
 call vundle#end()
 
@@ -55,10 +62,20 @@ map <C-n> :NERDTreeToggle<CR>
 " let g:Tex_MultipleCompileFormats='pdf, bib, dvi'
 " set grepprg=grep\ -nH\ $*
 
+"Syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
 "VIM
 "Set up terminal color and color scheme
 set t_Co=256
-colorscheme inori
+silent! colorscheme inori
 
 "remap leader
 let mapleader=","
