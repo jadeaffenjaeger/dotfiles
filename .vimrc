@@ -20,11 +20,14 @@ Plugin 'ddollar/nerdcommenter'
 Plugin 'lervag/vimtex'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mileszs/ack.vim'
+Plugin 'Valloric/YouCompleteMe'
 " Plugin 'scrooloose/syntastic'
 
 "Color Schemes
 Plugin 'duythinht/inori'
 Plugin 'sjl/badwolf'
+" Plugin 'baskerville/bubblegum'
+" Plugin 'ajmwagar/vim-deus'
 
 call vundle#end()
 
